@@ -8,16 +8,12 @@
             <link rel = "stylesheet" href = "timer.css">
         </head>
         <div id="timerUI">
-            <div class ="hours"> 
-                0 
+            <div id ="tiles">
+                <ul class ="hours"> </ul>
+                <ul class ="mins">  </ul>
+                <ul class ="secs">  </ul>
+                <button class ="stop"> STOP     
             </div>
-            <div class ="mins"> 
-                0 
-            </div>
-            <div class ="secs"> 
-                0
-            </div>
-            <button class ="stop"> STOP
         </div>
         <script>
             var timerCounterSecs = 0;
@@ -49,11 +45,9 @@
                 $(".secs").text(timerCounterSecs);  
             } 
             $(".stop").click(function(){
-                $(".mins").attr("disabled",true);
                 clearInterval(myTimer);
                 clearInterval(myTimer1);
                 clearInterval(myTimer2);
-
             });
         </script>
     </body>

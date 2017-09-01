@@ -1,0 +1,27 @@
+#timerUI{
+
+    height: 40%;
+    width:50%;
+    text-align:center;
+    font-size: 100px;
+    margin: 0 auto;
+}
+
+.hours{
+    
+    float: left;
+    height: 40%;
+    width:30%;
+}
+.mins{
+    
+    float: left;
+    height: 40%;
+    width:30%;
+}
+.secs{
+    
+    float: left;
+    height: 40%;
+    width:30%;
+}

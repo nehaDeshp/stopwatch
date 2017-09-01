@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <head>
+            <script src="https://code.jquery.com/jquery-3.2.1.js">
+            </script>
+            <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">-->
+            </script>
+            <link rel = "stylesheet" href = "timer.css">
+        </head>
+        <div id="timerUI">
+            <div class ="hours"> 
+                0 
+            </div>
+            <div class ="mins"> 
+                0 
+            </div>
+            <div class ="secs"> 
+                0
+            </div>
+            <div class ="stop">
+                <input type = button> STOP </input>
+            </div>
+        </div>
+        <script>
+            var timerCounterSecs = 0;
+            var timerCounterMins = 0;
+            var timerCounterHours = 0;
+
+            setInterval("startTimerSecs()",1000);
+            setInterval("startTimerMins()",60000);
+            setInterval("startTimerHours()",36000000);
+            function startTimerHours(){
+                if(timerCounterHours > 23){
+                    timerCounterHours = 0;
+                }
+                timerCounterHours++;
+                $(".hours").text(timerCounter);   
+            } 
+            function startTimerMins(){
+                if(timerCounterMins > 59){
+                    timerCounterMins = 0;
+                }
+                timerCounterMins++;
+                $(".mins").text(timerCounterMins);   
+            } 
+            function startTimerSecs(){
+                if(timerCounterSecs > 59){
+                    timerCounterSecs = 0;
+                }
+                timerCounterSecs++;
+                $(".secs").text(timerCounterSecs);   
+            } 
+        </script>
+    </body>
+</html>

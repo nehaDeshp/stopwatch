@@ -7,21 +7,17 @@
     margin: 0 auto;
 }
 
-.hours{
+.hours, .secs, .mins{
     
     float: left;
     height: 40%;
     width:30%;
 }
-.mins{
+.stop{
     
     float: left;
-    height: 40%;
-    width:30%;
-}
-.secs{
-    
-    float: left;
-    height: 40%;
-    width:30%;
+    margin:10px;
+    height: 20%;
+    width:80%;
+
 }

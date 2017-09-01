@@ -17,18 +17,16 @@
             <div class ="secs"> 
                 0
             </div>
-            <div class ="stop">
-                <input type = button> STOP </input>
-            </div>
+            <button class ="stop"> STOP
         </div>
         <script>
             var timerCounterSecs = 0;
             var timerCounterMins = 0;
             var timerCounterHours = 0;
 
-            setInterval("startTimerSecs()",1000);
-            setInterval("startTimerMins()",60000);
-            setInterval("startTimerHours()",36000000);
+            var myTimer = setInterval("startTimerSecs()",1000);
+            var myTimer1 = setInterval("startTimerMins()",60000);
+            var myTimer2 = setInterval("startTimerHours()",36000000);
             function startTimerHours(){
                 if(timerCounterHours > 23){
                     timerCounterHours = 0;
@@ -48,8 +46,15 @@
                     timerCounterSecs = 0;
                 }
                 timerCounterSecs++;
-                $(".secs").text(timerCounterSecs);   
+                $(".secs").text(timerCounterSecs);  
             } 
+            $(".stop").click(function(){
+                $(".mins").attr("disabled",true);
+                clearInterval(myTimer);
+                clearInterval(myTimer1);
+                clearInterval(myTimer2);
+
+            });
         </script>
     </body>
 </html>
